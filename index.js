@@ -10,10 +10,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+app.get('/post', (req, res) => {
   res.render('index', { title: 'Página de inicio', posts });
 });
 
 app.listen(4000, () => {
-  console.log('Server start on http://localhost:4000');
+  console.log('Server start on http://localhost:4000/post');
 });
